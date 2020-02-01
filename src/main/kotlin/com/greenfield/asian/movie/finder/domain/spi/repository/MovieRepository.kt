@@ -4,4 +4,5 @@ import com.greenfield.asian.movie.finder.domain.model.core.Movie
 
 interface MovieRepository {
     fun save(movie: Movie)
+    fun deleteAll()
 }

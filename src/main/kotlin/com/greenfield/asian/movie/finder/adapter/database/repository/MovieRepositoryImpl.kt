@@ -9,9 +9,12 @@ import org.springframework.stereotype.Repository
 @Repository
 class MovieRepositoryImpl(
         private val crud: CRUDMovieRepository
-): MovieRepository {
+) : MovieRepository {
 
     override fun save(movie: Movie) {
         crud.save(movie.mapToEntity())
     }
+
+    override fun deleteAll() = crud.deleteAll()
+
 }
